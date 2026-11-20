@@ -1,6 +1,4 @@
-# 🏷️ [NOMBRE DEL EQUIPO] — Proyecto [NN]
-
-> **Ficha del caso** — reemplaza este archivo: es la carta de presentación de tu equipo y lo primero que verá el panel en la sustentación.
+# 🏷️ [pixies] — Proyecto [sensores ambientales del campus]
 
 | Campo | Valor |
 |---|---|
