@@ -2,8 +2,8 @@
 
 | Campo | Valor |
 |---|---|
-| Proyecto | [NN — nombre] |
-| Integrantes | [nombres y códigos] |
+| Proyecto | [sensores ambientales del campus] |
+| Integrantes | [Miguel Andrés Motta Alzate 1060266580 - Nataly Londoño Marin 1055755050] |
 | URL demo | https://... |
 | Costo mensual real | USD ... (objetivo: USD ...) |
 | Despliegue | `aws cloudformation deploy --template-file iac/main.yaml --stack-name gtn-[equipo] --capabilities CAPABILITY_NAMED_IAM` |
