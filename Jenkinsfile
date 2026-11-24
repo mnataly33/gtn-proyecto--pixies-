@@ -1,11 +1,10 @@
 pipeline {
   agent any
-  tools { } // Jenkins sobre la EC2 del proyecto: docker y pip disponibles ahí
   environment { IMAGEN = "gtn-app" }
   stages {
     stage('Validar IaC') {
       steps {
-        sh 'pip install cfn-lint 2>/dev/null || pip3 install cfn-lint'
+        sh 'cfn-lint --version || pip3 install --break-system-packages cfn-lint'
         sh 'cfn-lint iac/*.yaml'
       }
     }
