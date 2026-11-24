@@ -4,8 +4,12 @@ pipeline {
   stages {
     stage('Validar IaC') {
       steps {
-        sh 'cfn-lint --version || pip3 install --break-system-packages cfn-lint'
-        sh 'cfn-lint iac/*.yaml'
+        // pip instala cfn-lint en ~/.local/bin del usuario jenkins, que no está en el PATH
+        sh '''
+          export PATH="$HOME/.local/bin:$PATH"
+          cfn-lint --version || pip3 install --user --break-system-packages cfn-lint
+          cfn-lint iac/*.yaml
+        '''
       }
     }
     stage('Construir imagen') {
